@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+    --color-lighter: #f6eecc;
+    --color-light: #ccc68d;
+    --color-medium: #8e845b;
+    --color-white: #fdfbf4;
+    --color-black: #17160f;
+    --spacer: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--color-lighter);
+    color: var(--color-black);
+}
+
+main {
+    padding: var(--spacer);
+}
+
+.box-inverse {
+    background-color: var(--color-black);
+    color: var(--color-lighter);
+    padding: var(--spacer);
+    margin-bottom: var(--spacer);
+}
+
+a.button {
+    display: block;
+    padding: var(--spacer);
+    background-color: var(--color-medium);
+    color: var(--color-black);
+    text-align: center;
+    font-weight: bold;
+}

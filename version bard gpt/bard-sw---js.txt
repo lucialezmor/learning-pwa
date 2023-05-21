@@ -1,0 +1,42 @@
+Here is the JavaScript code that you can use to convert an HTML/CSS website into a PWA:
+
+JavaScript
+// Create a service worker
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+
+// Create a manifest file
+const manifest = {
+  name: "My PWA",
+  short_name: "My PWA",
+  description: "This is my Progressive Web App",
+  icons: [
+    {
+      src: "/images/icon-192.png",
+      sizes: "192x192",
+      type: "image/png",
+    },
+    {
+      src: "/images/icon-512.png",
+      sizes: "512x512",
+      type: "image/png",
+    },
+  ],
+  background_color: "#ffffff",
+  theme_color: "#000000",
+  start_url: "/",
+};
+
+// Write the manifest file to disk
+const fs = require("fs");
+fs.writeFileSync("manifest.json", JSON.stringify(manifest, null, 2));
+
+// Add the manifest file to the HTML page
+const head = document.head;
+const link = document.createElement("link");
+link.href = "manifest.json";
+link.rel = "manifest";
+head.appendChild(link);
+Use code with caution. Learn more
+Once you have added this code to your website, you can visit it in a browser and it will be displayed as a Progressive Web App. You will be able to install it on your device and launch it from your home screen.
